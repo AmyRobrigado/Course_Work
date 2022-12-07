@@ -15,6 +15,7 @@ function populateCourseTable() {
             for (let i in courses) {
                 let tr = document.createElement("tr");
                 tbody.appendChild(tr);
+                
                 //----------------------------------------------------------
 
                 let td1 = document.createElement("td");
@@ -30,7 +31,7 @@ function populateCourseTable() {
                 tr.appendChild(td3);
 
                 let anchor = document.createElement("a");
-                anchor.href = 'http://127.0.0.1:5500/pages/details.html';
+                anchor.href = `http://127.0.0.1:5500/pages/details.html?courseid=${courses[i].id}`;
                 anchor.text = "See details";
 
                 tr.appendChild(anchor);
